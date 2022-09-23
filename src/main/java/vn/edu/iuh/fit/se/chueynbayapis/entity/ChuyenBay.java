@@ -34,6 +34,10 @@ public class ChuyenBay {
 		GioDen = gioDen;
 		ChiPhi = chiPhi;
 	}
+	
+	public ChuyenBay() {
+		super();
+	}
 	public ChuyenBay(String maCB) {
 		super();
 		MaCB = maCB;
