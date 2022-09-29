@@ -1,7 +1,11 @@
 package vn.edu.iuh.fit.se.chueynbayapis.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -11,6 +15,8 @@ public class MayBay {
 	private int MaMB;
 	private String Loai;
 	private int TamBay;
+	@OneToMany(mappedBy = "mayBay")
+	private List<ChungNhan> dsChungNhan = new ArrayList<ChungNhan>();
 	public MayBay(int maMB, String loai, int tamBay) {
 		super();
 		MaMB = maMB;

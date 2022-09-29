@@ -1,5 +1,6 @@
 package vn.edu.iuh.fit.se.chueynbayapis.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -16,10 +17,7 @@ public class NhanVien {
 	private int Luong;
 	
 	@OneToMany(mappedBy = "nhanVien")
-	private List<ChungNhan> dsChungNhan;
-	
-	@OneToMany(mappedBy = "chuyenBay")
-	private List<ChuyenBay> dsChuyenBay;
+	private List<ChungNhan> dsChungNhan = new ArrayList<ChungNhan>();
 	
 	public NhanVien(String maNV, String ten, int luong) {
 		super();

@@ -1,5 +1,6 @@
 package vn.edu.iuh.fit.se.chueynbayapis.service.impl;
 
+import java.util.List;
 import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,12 @@ public class ChuyenBayServiceImpl implements IChuyenBayService{
             return null;
         }
 		return chuyenBay;
+	}
+
+	@Override
+	public List<ChuyenBay> getListChuyenBayByGaDen(String gaDen) {
+		List<ChuyenBay> listChuyenBay = chuyenBayRepository.findAllChuyenBayByGaDen(gaDen);
+		return listChuyenBay;
 	}
 
 }
