@@ -8,89 +8,77 @@ import javax.persistence.*;
 @Table(name = "chuyenbay")
 public class ChuyenBay {
 	@Id
-	private String MaCB;
-	private String GaDi;
-	private String GaDen;
-	private int DoDai;
-	private Date GioDi;
-	private Date GioDen;
-	private int ChiPhi;
-	public ChuyenBay(String maCB, String gaDi, String gaDen, int doDai, Date gioDi, Date gioDen, int chiPhi) {
-		super();
-		MaCB = maCB;
-		GaDi = gaDi;
-		GaDen = gaDen;
-		DoDai = doDai;
-		GioDi = gioDi;
-		GioDen = gioDen;
-		ChiPhi = chiPhi;
-	}
-	public ChuyenBay(String gaDi, String gaDen, int doDai, Date gioDi, Date gioDen, int chiPhi) {
-		super();
-		GaDi = gaDi;
-		GaDen = gaDen;
-		DoDai = doDai;
-		GioDi = gioDi;
-		GioDen = gioDen;
-		ChiPhi = chiPhi;
-	}
-	
+	private String maCB;
+	private String gaDi;
+	private String gaDen;
+	private int doDai;
+	private Date gioDi;
+	private Date gioDen;
+	private int chiPhi;
 	public ChuyenBay() {
 		super();
 	}
+	public ChuyenBay(String maCB, String gaDi, String gaDen, int doDai, Date gioDi, Date gioDen, int chiPhi) {
+		super();
+		this.maCB = maCB;
+		this.gaDi = gaDi;
+		this.gaDen = gaDen;
+		this.doDai = doDai;
+		this.gioDi = gioDi;
+		this.gioDen = gioDen;
+		this.chiPhi = chiPhi;
+	}
 	public ChuyenBay(String maCB) {
 		super();
-		MaCB = maCB;
+		this.maCB = maCB;
 	}
 	public String getMaCB() {
-		return MaCB;
+		return maCB;
 	}
 	public void setMaCB(String maCB) {
-		MaCB = maCB;
+		this.maCB = maCB;
 	}
 	public String getGaDi() {
-		return GaDi;
+		return gaDi;
 	}
 	public void setGaDi(String gaDi) {
-		GaDi = gaDi;
+		this.gaDi = gaDi;
 	}
 	public String getGaDen() {
-		return GaDen;
+		return gaDen;
 	}
 	public void setGaDen(String gaDen) {
-		GaDen = gaDen;
+		this.gaDen = gaDen;
 	}
 	public int getDoDai() {
-		return DoDai;
+		return doDai;
 	}
 	public void setDoDai(int doDai) {
-		DoDai = doDai;
+		this.doDai = doDai;
 	}
 	public Date getGioDi() {
-		return GioDi;
+		return gioDi;
 	}
 	public void setGioDi(Date gioDi) {
-		GioDi = gioDi;
+		this.gioDi = gioDi;
 	}
 	public Date getGioDen() {
-		return GioDen;
+		return gioDen;
 	}
 	public void setGioDen(Date gioDen) {
-		GioDen = gioDen;
+		this.gioDen = gioDen;
 	}
 	public int getChiPhi() {
-		return ChiPhi;
+		return chiPhi;
 	}
 	public void setChiPhi(int chiPhi) {
-		ChiPhi = chiPhi;
+		this.chiPhi = chiPhi;
 	}
 	@Override
 	public String toString() {
-		return "ChuyenBay [MaCB=" + MaCB + ", GaDi=" + GaDi + ", GaDen=" + GaDen + ", DoDai=" + DoDai + ", GioDi="
-				+ GioDi + ", GioDen=" + GioDen + ", ChiPhi=" + ChiPhi + "]";
+		return "ChuyenBay [maCB=" + maCB + ", gaDi=" + gaDi + ", gaDen=" + gaDen + ", doDai=" + doDai + ", gioDi="
+				+ gioDi + ", gioDen=" + gioDen + ", chiPhi=" + chiPhi + "]";
 	}
-	
-	
-	
+
 	
 }

@@ -12,48 +12,68 @@ import javax.persistence.Table;
 @Table(name = "nhanvien")
 public class NhanVien {
 	@Id
-	private String MaNV;
-	private String Ten;
-	private int Luong;
+	private String maNV;
+	private String ten;
+	private int luong;
 	
 	@OneToMany(mappedBy = "nhanVien")
 	private List<ChungNhan> dsChungNhan = new ArrayList<ChungNhan>();
-	
-	public NhanVien(String maNV, String ten, int luong) {
-		super();
-		MaNV = maNV;
-		Ten = ten;
-		Luong = luong;
-	}
+
 	public NhanVien() {
 		super();
 	}
+
 	public NhanVien(String maNV) {
 		super();
-		MaNV = maNV;
+		this.maNV = maNV;
 	}
+
+	public NhanVien(String maNV, String ten, int luong, List<ChungNhan> dsChungNhan) {
+		super();
+		this.maNV = maNV;
+		this.ten = ten;
+		this.luong = luong;
+		this.dsChungNhan = dsChungNhan;
+	}
+
 	public String getMaNV() {
-		return MaNV;
+		return maNV;
 	}
+
 	public void setMaNV(String maNV) {
-		MaNV = maNV;
+		this.maNV = maNV;
 	}
+
 	public String getTen() {
-		return Ten;
+		return ten;
 	}
+
 	public void setTen(String ten) {
-		Ten = ten;
+		this.ten = ten;
 	}
+
 	public int getLuong() {
-		return Luong;
+		return luong;
 	}
+
 	public void setLuong(int luong) {
-		Luong = luong;
+		this.luong = luong;
 	}
+
+	public List<ChungNhan> getDsChungNhan() {
+		return dsChungNhan;
+	}
+
+	public void setDsChungNhan(List<ChungNhan> dsChungNhan) {
+		this.dsChungNhan = dsChungNhan;
+	}
+
 	@Override
 	public String toString() {
-		return "NhanVien [MaNV=" + MaNV + ", Ten=" + Ten + ", Luong=" + Luong + "]";
+		return "NhanVien [maNV=" + maNV + ", ten=" + ten + ", luong=" + luong + ", dsChungNhan=" + dsChungNhan + "]";
 	}
+	
+	
 	
 	
 	

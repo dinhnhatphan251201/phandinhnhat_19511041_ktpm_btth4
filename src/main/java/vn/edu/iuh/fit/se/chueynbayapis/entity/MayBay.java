@@ -12,46 +12,55 @@ import javax.persistence.Table;
 @Table(name = "maybay")
 public class MayBay {
 	@Id
-	private int MaMB;
-	private String Loai;
-	private int TamBay;
+	private int maMB;
+	private String loai;
+	private int tamBay;
 	@OneToMany(mappedBy = "mayBay")
 	private List<ChungNhan> dsChungNhan = new ArrayList<ChungNhan>();
-	public MayBay(int maMB, String loai, int tamBay) {
-		super();
-		MaMB = maMB;
-		Loai = loai;
-		TamBay = tamBay;
-	}
 	public MayBay() {
 		super();
 	}
+	public MayBay(int maMB, String loai, int tamBay, List<ChungNhan> dsChungNhan) {
+		super();
+		this.maMB = maMB;
+		this.loai = loai;
+		this.tamBay = tamBay;
+		this.dsChungNhan = dsChungNhan;
+	}
 	public MayBay(int maMB) {
 		super();
-		MaMB = maMB;
+		this.maMB = maMB;
 	}
 	public int getMaMB() {
-		return MaMB;
+		return maMB;
 	}
 	public void setMaMB(int maMB) {
-		MaMB = maMB;
+		this.maMB = maMB;
 	}
 	public String getLoai() {
-		return Loai;
+		return loai;
 	}
 	public void setLoai(String loai) {
-		Loai = loai;
+		this.loai = loai;
 	}
 	public int getTamBay() {
-		return TamBay;
+		return tamBay;
 	}
 	public void setTamBay(int tamBay) {
-		TamBay = tamBay;
+		this.tamBay = tamBay;
+	}
+	public List<ChungNhan> getDsChungNhan() {
+		return dsChungNhan;
+	}
+	public void setDsChungNhan(List<ChungNhan> dsChungNhan) {
+		this.dsChungNhan = dsChungNhan;
 	}
 	@Override
 	public String toString() {
-		return "MayBay [MaMB=" + MaMB + ", Loai=" + Loai + ", TamBay=" + TamBay + "]";
+		return "MayBay [maMB=" + maMB + ", loai=" + loai + ", tamBay=" + tamBay + ", dsChungNhan=" + dsChungNhan + "]";
 	}
+	
+	
 	
 	
 }
