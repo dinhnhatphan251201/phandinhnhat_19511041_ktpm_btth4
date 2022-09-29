@@ -15,4 +15,7 @@ import org.springframework.data.repository.query.Param;
 public interface ChuyenBayRepository extends JpaRepository<ChuyenBay, String>{
 	@Query(value = "select * from chuyenbay where GaDen=?1", nativeQuery = true)
 	List<ChuyenBay> findAllChuyenBayByGaDen(String gaDen);
+	
+	@Query(value = "select * from chuyenbay where GaDi=?1 and Gaden=?2", nativeQuery = true)
+	List<ChuyenBay> findAllChuyenBayByGaDiAndGaDen(String gaDi,String gaDen);
 }

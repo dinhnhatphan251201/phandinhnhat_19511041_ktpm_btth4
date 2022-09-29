@@ -32,4 +32,10 @@ public class ChuyenBayServiceImpl implements IChuyenBayService{
 		return listChuyenBay;
 	}
 
+	@Override
+	public List<ChuyenBay> findAllChuyenBayByGaDiAndGaDen(String gaDi, String gaDen) {
+		List<ChuyenBay> dsChuyenBay = chuyenBayRepository.findAllChuyenBayByGaDiAndGaDen(gaDi, gaDen);
+		return dsChuyenBay;
+	}
+
 }

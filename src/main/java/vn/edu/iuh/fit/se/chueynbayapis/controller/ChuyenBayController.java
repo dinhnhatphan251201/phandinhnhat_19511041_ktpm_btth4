@@ -32,4 +32,5 @@ public class ChuyenBayController {
 		List<ChuyenBay> listChuyenBay = chuyenBayService.getListChuyenBayByGaDen(gaDen);
 		return listChuyenBay;
 	}
+	
 }
